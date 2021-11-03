@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/tutan/Desktop/new-1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Calculator</title>
+<style>
+	#display, button{
+	width:100px;
+	margin:10px;
+	padding:10px;
+	font:bold 32px Times New Roman;
+	border:1px solid blue;
+	}
+	button:hover{
+	background:lime;
+	}
+	#display{
+	width:450px;
+	text-align:left;
+	}
+	body{
+	display:flex;
+	justify-content:center;
+	align-items:center;	
+	height:100vh;
+	box-sizing:border-box;
+	background:pink;
+	}
+	</style></head>
+    
+<body>
+<div>
+<div>
+    <input id="display" type="text">
+</div>
+
+<div>
+    <button onclick="press(&#39;+&#39;)">+</button>
+    <button onclick="press(&#39;7&#39;)">7</button>
+    <button onclick="press(&#39;8&#39;)">8</button>
+    <button onclick="press(&#39;9&#39;)">9</button>
+</div>
+<div>
+    <button onclick="press(&#39;-&#39;)">-</button>
+    <button onclick="press(&#39;4&#39;)">4</button>
+    <button onclick="press(&#39;5&#39;)">5</button>
+    <button onclick="press(&#39;6&#39;)">6</button>
+</div>
+<div>
+    <button onclick="press(&#39;*&#39;)">*</button>
+    <button onclick="press(&#39;1&#39;)">1</button>
+    <button onclick="press(&#39;2&#39;)">2</button>
+    <button onclick="press(&#39;3&#39;)">3</button>
+</div>
+<div>
+    <button onclick="press(&#39;/&#39;)">/</button>
+    <button onclick="reset()">C</button>
+    <button onclick="press(&#39;0&#39;)">0</button>
+    <button onclick="calc()">=</button>
+</div>
+</div>
+<script>
+     let display = document.getElementById("display");
+	    function reset(){
+	display.value = "";
+	 }
+	    function press(x){
+	display.value += x;	
+		}
+		function calc(){
+	display.value = eval(display.value);	
+		}
+
+</script>
+
+</body></html>
